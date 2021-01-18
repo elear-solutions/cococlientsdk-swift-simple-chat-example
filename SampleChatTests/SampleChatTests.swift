@@ -1,14 +1,14 @@
 //
-//  CocoSyncTests.swift
-//  CocoSyncTests
+//  SampleChatTests.swift
+//  SampleChatTests
 //
 //  Created by rohan-elear on 16/01/21.
 //
 
 import XCTest
-@testable import CocoSync
+@testable import SampleChat
 
-class CocoSyncTests: XCTestCase {
+class SampleChatTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

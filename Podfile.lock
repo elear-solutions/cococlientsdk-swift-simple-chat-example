@@ -1,0 +1,21 @@
+PODS:
+  - CocoClientSDK (0.2.45)
+
+DEPENDENCIES:
+  - CocoClientSDK (from `https://github.com/elear-solutions/cococlientsdk-swift-framework.git`)
+
+EXTERNAL SOURCES:
+  CocoClientSDK:
+    :git: https://github.com/elear-solutions/cococlientsdk-swift-framework.git
+
+CHECKOUT OPTIONS:
+  CocoClientSDK:
+    :commit: 5d783f44c0fb2ecc65641649f2f393f23fc34d92
+    :git: https://github.com/elear-solutions/cococlientsdk-swift-framework.git
+
+SPEC CHECKSUMS:
+  CocoClientSDK: 847cce1eba2d79e1b128e8f9bdd68b9ae23307db
+
+PODFILE CHECKSUM: 65b52c48e410ec7f9490ce2abf36d85a2f4c42b3
+
+COCOAPODS: 1.10.1
