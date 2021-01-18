@@ -70,6 +70,11 @@ struct ContentView: View {
     .onAppear(perform: {
       let storage = LocalStorageService.init()
       let savedNetworkId = storage.restoreNetworkId()
+      /**
+       Checking if the user already logged in with inviteURL
+       if user had logged in, connecting with invite is not
+       required for subsequent runs.
+       */
       if savedNetworkId.isEmpty {
         let params = ConnectParams()
         params.setNetworkName(chatController.client.networkName)

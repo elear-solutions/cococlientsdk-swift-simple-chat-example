@@ -59,7 +59,7 @@ struct ConnectCallnet: View {
           .hidden()
       )
     }
-    .navigationTitle("CocoSync")
+    .navigationTitle("SampleChat")
   }
   
   init() {

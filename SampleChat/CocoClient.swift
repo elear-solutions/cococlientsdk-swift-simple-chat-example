@@ -10,6 +10,9 @@ import SwiftUI
 import os
 
 class Client {
+  /**
+   Variables fetched from coco cloud services
+   */
   var inviteURL: String = ""
   var nodeId: UInt32 = 0
   var networkId: String = ""
