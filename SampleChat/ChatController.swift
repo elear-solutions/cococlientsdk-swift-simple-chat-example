@@ -35,7 +35,7 @@ class ChatController : ObservableObject {
     let encoder = JSONEncoder()
     let data = (try? encoder.encode(chatMessage))!
     let payload = String(data: data, encoding: .utf8)
-    let nodeIds = [UInt32]()
+    let nodeIds: [UInt32] = [UInt32]()
     do {
       try client.coco?.networkMap[client.networkId]?.sendData(with: payload,
                                                           nodeIds: nodeIds)

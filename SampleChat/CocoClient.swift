@@ -57,7 +57,7 @@ class PlatformCallback: PlatformDelegate {
   }
   
   func getAppAccesslist() -> String {
-    let accessList = "{\"appCapabilities\": [0]}"
+    let accessList = "{\"appCapabilities\": []}"
     return accessList
   }
   
