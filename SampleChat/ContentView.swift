@@ -104,7 +104,7 @@ struct ContentView: View {
   
   func sendMessage() {
     let message = ChatMessage(message: composedMessage,
-                              avatar: String(LocalStorageService.init().restoreNodeId()),
+                              avatar: String(LocalStorageService.init().restoreUsername()),
                               isMe: true)
     try? chatController.sendMessage(message)
     composedMessage = ""

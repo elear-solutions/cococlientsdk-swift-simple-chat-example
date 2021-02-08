@@ -14,6 +14,7 @@ struct ConnectCallnet: View {
   @State var networkId: String = ""
   @State var inviteURL: String = ""
   @State var nodeId: String = ""
+  @State var username: String = ""
   @State var isLinkActive = false
   
   var body: some View {
@@ -35,6 +36,11 @@ struct ConnectCallnet: View {
           .cornerRadius(30)
           .keyboardType(.numberPad)
         
+        TextField("Username", text: $username)
+          .frame(width: CGFloat(300), height: CGFloat(30), alignment: .center)
+          .padding()
+          .cornerRadius(30)
+        
         Button(action: connectCallnet) {
           Text("Connect Callnet")
         }
@@ -47,6 +53,7 @@ struct ConnectCallnet: View {
       .onAppear(perform: {
         networkId = storage.restoreNetworkId()
         nodeId = String(storage.restoreNodeId())
+        username = String(storage.restoreUsername())
       })
       .background(
         NavigationLink(
@@ -72,6 +79,7 @@ struct ConnectCallnet: View {
     chatController.client.networkId = networkId
     chatController.client.inviteURL = inviteURL
     chatController.client.nodeId = UInt32(nodeId) ?? 0
+    storage.storeUsername(username)
     
     isLinkActive = true
   }

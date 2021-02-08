@@ -14,6 +14,7 @@ class LocalStorageService {
     case networkId
     case nodeId
     case chatHistory
+    case username
   }
   
   init(userDefaults: UserDefaults = .standard) {
@@ -63,5 +64,14 @@ class LocalStorageService {
   func restoreNodeId() -> UInt32 {
     let nodeId: UInt32? = restore(forKey: .nodeId)
     return nodeId ?? 0
+  }
+  
+  func storeUsername(_ username: String) {
+    save(forKey: .username, value: username)
+  }
+  
+  func restoreUsername() -> String {
+    let username: String? = restore(forKey: .username)
+    return username ?? ""
   }
 }
